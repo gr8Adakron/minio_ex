@@ -1,8 +1,8 @@
 defmodule Minio.Helper do
-  
+
   @doc "HMAC-SHA256 hash computation helper"
   def hmac(key, data),
-    do: :crypto.hmac(:sha256, key, data)
+    do: :crypto.mac(:hmac,:sha256, key, data)
 
   @doc "SHA256 hash computation helper"
   def sha256(data),
@@ -51,7 +51,7 @@ defmodule Minio.Helper do
 
   def remove_default_port(%URI{host: host, port: port}),
     do: "#{host}:#{port}"
-  
+
   @doc """
   Checks if the bucketname provided is valid
   """
