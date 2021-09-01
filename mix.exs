@@ -11,7 +11,7 @@ defmodule Minio.MixProject do
       package: package(),
       description: description(),
       name: "minio",
-      source_url: "https://github.com/srivathsanmurali/minio_ex"
+      source_url: "https://github.com/gr8Adakron/minio_ex"
     ]
   end
 
